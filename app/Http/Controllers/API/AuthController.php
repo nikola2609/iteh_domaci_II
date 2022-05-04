@@ -43,7 +43,7 @@ class AuthController extends Controller
 
         $token = $user->createToken('auth_token')->plainTextToken;
 
-        return response()->json(['message'=>'Uspesno ste se ulogovali'.$user->ime." ".$user->prezime,
+        return response()->json(['message'=>'Uspesno ste se ulogovali',
             'access_token'=>$token,'token_type'=>'Bearer']);
 
     }
