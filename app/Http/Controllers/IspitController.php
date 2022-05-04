@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\IspitCollection;
+use App\Http\Resources\IspitResource;
 use App\Models\Ispit;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,8 @@ class IspitController extends Controller
      */
     public function index()
     {
-        //
+        $ispiti = Ispit::all();
+        return new IspitCollection($ispiti);
     }
 
     /**
@@ -46,7 +49,7 @@ class IspitController extends Controller
      */
     public function show(Ispit $ispit)
     {
-        //
+        return new IspitResource($ispit);
     }
 
     /**
