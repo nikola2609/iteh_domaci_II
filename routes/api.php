@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\IspitController;
 use App\Http\Controllers\PrijavaController;
 use App\Http\Controllers\StudentController;

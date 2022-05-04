@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\PrijavaCollection;
+use App\Http\Resources\PrijavaResource;
 use App\Models\Prijava;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,8 @@ class PrijavaController extends Controller
      */
     public function index()
     {
-        //
+        $prijave = Prijava::all();
+        return new PrijavaCollection($prijave);
     }
 
     /**
@@ -46,7 +49,7 @@ class PrijavaController extends Controller
      */
     public function show(Prijava $prijava)
     {
-        //
+        return new PrijavaResource($prijava);
     }
 
     /**
