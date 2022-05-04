@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('prijava', function (Blueprint $table) {
+        Schema::create('prijavas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('student_id');
             $table->foreignId('ispit_id');
