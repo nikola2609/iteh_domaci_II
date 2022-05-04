@@ -104,6 +104,8 @@ class IspitController extends Controller {
         $ispit->espb = $request->espb;
         $ispit->semestar = $request->semestar;
 
+        $ispit->save();
+
         return response()->json(['Ispit uspesno azuriran', new IspitResource($ispit)]);
     }
 

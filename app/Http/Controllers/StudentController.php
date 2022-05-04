@@ -104,6 +104,8 @@ class StudentController extends Controller {
         $student->email = $request->email;
         $student->mesto_stanovanja = $request->mesto_stanovanja;
 
+        $student->save();
+
         return response()->json(['Student uspesno azuriran', new StudentResource($student)]);
     }
 
