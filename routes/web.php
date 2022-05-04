@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\IspitController;
+use App\Http\Controllers\PrijavaController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('ispit',IspitController::class)->only(['index','show']);
+Route::resource('student',StudentController::class)->only(['index','show']);
+Route::resource('prijava',PrijavaController::class)->only(['index','show']);
