@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('prijava', function (Blueprint $table) {
             $table->id();
             $table->foreignId('student_id');
-            $table->foreignId('ispit?id');
+            $table->foreignId('ispit_id');
             $table->string('ispitni_rok');
             $table->date('datum_prijave');
             $table->timestamps();

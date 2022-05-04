@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('student', function (Blueprint $table) {
             $table->id();
-            $table->string('broj_indeksa');
+            $table->string('broj_indeksa')->unique();
             $table->string('ime_prezime');
             $table->date('datum_rodjenja');
             $table->string('email');

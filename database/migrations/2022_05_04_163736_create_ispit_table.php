@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('ispit', function (Blueprint $table) {
             $table->id();
             $table->string('naziv_predmeta');
-            $table->string('fakultet');
+            $table->string('katedra');
             $table->string('godina_studija');
             $table->string('espb');
             $table->timestamps();
